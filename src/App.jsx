@@ -10,18 +10,15 @@ import NotFound from "./components/pages/NotFound";
 function App() {
   const [userQuestions, setUserQuestions] = useState([]);
   const [userAnswers, setUserAnswers] = useState([{}]);
-  // const [falseAnswers, setFalseAnswers] = useState([]);
   const [subject, setSubject] = useState("Networking");
   function handleUserQuestions(questions) {
-    // console.log(questions.question);
     setUserQuestions((preValue) => {
       const update = [...preValue, questions.question];
       return update;
     });
-    // console.log(userQuestions);
   }
   function handleSubmit() {
-    // console.log(userAnswers);
+  
   }
   function handleSubject(sub) {
     const value = sub.target.value;
@@ -32,11 +29,6 @@ function App() {
       return [...pre, ipt];
     });
   }
-  // function handleWrongAnswers(ipt) {
-  //   setFalseAnswers(pre => {
-  //     return [...pre , ipt.value];
-  //   });
-  // }
   function resetValues() {
     setUserAnswers([]);
     setUserQuestions([]);

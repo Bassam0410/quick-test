@@ -10,7 +10,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/quick-test",
+  base: "/",
   server: {
     port : 3000
   }

@@ -58,6 +58,7 @@ ul li.link::after {
   content: '';
   position: absolute;
   background-color: var(--secondary-color);
+  border-radius: 5px;
   bottom:  0;
   left: 0;
   height: 3px;
