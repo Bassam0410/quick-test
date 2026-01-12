@@ -6,7 +6,7 @@ export default function Header() {
     <nav>
       <img className="logo" src={Logo} alt="logo-image" />
       <ul>
-        <Link to="/home" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li className="link">Home</li>
         </Link>
         <Link to="/start-quiz" style={{ textDecoration: "none" }}>
