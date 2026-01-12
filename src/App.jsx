@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Routes, Route, HashRouter } from "react-router-dom";
 import Test from "./components/Test";
 import Welcome from "./components/pages/Welcome";
 import Finish from "./components/Finish";
@@ -12,14 +12,9 @@ function App() {
   const [userAnswers, setUserAnswers] = useState([{}]);
   const [subject, setSubject] = useState("Networking");
   function handleUserQuestions(questions) {
-    setUserQuestions((preValue) => {
-      const update = [...preValue, questions.question];
-      return update;
-    });
+    setUserQuestions(questions);    
   }
-  function handleSubmit() {
-  
-  }
+  function handleSubmit() {}
   function handleSubject(sub) {
     const value = sub.target.value;
     setSubject(value);
@@ -36,7 +31,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route
             path="/"
@@ -78,7 +73,7 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

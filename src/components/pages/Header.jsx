@@ -16,7 +16,7 @@ export default function Header() {
         <Link to="/About" style={{ textDecoration: "none" }}>
           <li className="link">About</li>
         </Link>
-        <Link to="/Contact" style={{ textDecoration: "none" }}>
+        <Link to="/Contact" disabled= {true}  style={{ textDecoration: "none" }}>
           <li className="link">Contact</li>
         </Link>
       </ul>

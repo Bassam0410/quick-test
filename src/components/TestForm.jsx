@@ -5,8 +5,8 @@ export default function TestForm(props) {
   return (
     <>
       <p className="total">
-        Question <span>{props.qNumber + 1}</span> of 
-         <span> { props.totalQuestions.length}</span> 
+        Question <span>{props.qNumber  +1}</span> of 
+        <span> { props.totalQuestions.length }</span> 
       </p>
       <h3>{props.question.question}</h3>
       <form className="options-container">

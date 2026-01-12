@@ -224,7 +224,7 @@ button:hover {
 }
 
 h3 {
-  margin-bottom: 20px;
+  margin : 7px auto;
   color: var(--text-color);
 }
 .total{
@@ -361,14 +361,15 @@ button:hover {
 .answer{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   /* box-shadow: 0px 0 1px #66c266; */
   padding: 15px;
   width: 80%;
   margin: 15px  auto;
   border-radius: 5px;
 }
-.answer p {background-color: var(--main-color);
+.answer p {
+  background-color: var(--main-color);
   padding: 5px;
   border-radius: 5px;
   color: var(--secondary-color);

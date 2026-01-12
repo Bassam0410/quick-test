@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./pages/Header";
-import Footer from "./pages/Footer";
 export default function Finish(props) {
   // console.log(props.userAnswers);
   let correctAnswers = []
@@ -24,9 +23,9 @@ export default function Finish(props) {
     textAlign: "center",
   };
   const style = {
-    fontSize: "12px",
-    color: "#8a8585c2",
-  };
+    fontSize: "15px",
+    color: "blue",
+  };  
   return (
     <div>
       <Header />

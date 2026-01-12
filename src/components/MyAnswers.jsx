@@ -1,23 +1,26 @@
 import React from "react";
 import Header from "./pages/Header";
 export default function MyAnswers(props) {
-  const answers = props.answers;
-  const questions = props.questions;
+    const answers = props.answers;
+    const questions = props.questions;
   return (
     <div>
-      <Header />
-      {questions.map((question, qIndex) => {
+      <Header/>
+          {questions.map((question, qIndex) => {
+          const answer = answers[qIndex].answer || 'No Answer'
         return (
           <div
             key={qIndex}
-            className="answer anim-show"
             style={{
-              border: "   2px solid ",
-              borderColor: answers[qIndex + 1].value ? "rgb(52 253 52)" : "red",
+              border: "2px solid ",
+              borderColor: answers[qIndex].value ? "rgb(52 253 52)" : "red",
             }}
+            className="answer anim-show"
           >
-            <h3>{question}</h3>
-            <p>{answers[qIndex + 1].answer}</p>
+            {console.log(question)}
+            <h3>{question.question}</h3>
+            {console.log(answers[qIndex].answer)}
+            <p>{answer}</p>
           </div>
         );
       })}
