@@ -40,7 +40,7 @@ export default function Finish(props) {
           <Link to="/my-answers">
             <button>My Answers</button>
           </Link>
-          <Link to="/">
+          <Link to="/home">
             <button>Go Back</button>
           </Link>
           <Link to="/correct-answers">

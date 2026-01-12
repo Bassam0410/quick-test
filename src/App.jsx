@@ -47,7 +47,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <Welcome resetValues={resetValues} setSubject={handleSubject} />
             }
