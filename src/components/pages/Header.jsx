@@ -11,12 +11,6 @@ export default function Header() {
         </Link>
         <Link to="/start-quiz" style={{ textDecoration: "none" }}>
           <li className="link">Start a Quiz
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
           </li>
         </Link>
         <Link to="/About" style={{ textDecoration: "none" }}>
