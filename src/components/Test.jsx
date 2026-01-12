@@ -8,7 +8,9 @@ export default function Test(props) {
   const [qNumber, setQNumber] = useState(0);
   const [finish, setFinish] = useState(true);
   const quizQuestionsType = shuffle(quizQuestions[props.subject].questions);
-  let question = quizQuestionsType[qNumber];
+    let question = quizQuestionsType[qNumber];
+    console.log('question number ' + qNumber );
+    
   function handleInputChange() {
     setFinish(false);
   }
@@ -18,17 +20,16 @@ export default function Test(props) {
     const input = document.querySelector(
       `input[name= ${question.name}]:checked`
     );
-    if (qNumber === quizQuestionsType.length) {
-      console.log("no more questions !");
-    } else {
       const value = input.value;
       if (value === question.correctAnswer) {
         props.setUserAnswers({ answer: value, value: true });
       } else {
         props.setUserAnswers({ answer: value, value: false });
+      } if (qNumber  <= quizQuestionsType.length ) {
+          console.log('added');
+          setQNumber((pre) => pre + 1);
       }
-      setQNumber((pre) => pre + 1);
-    }
+
     const unCheck = document.querySelectorAll(`input[name= ${question.name}]`);
     unCheck.forEach((radio) => {
       radio.checked = false;
@@ -45,12 +46,11 @@ export default function Test(props) {
           handleInputChange={handleInputChange}
         />
         <div className="buttons">
-          {qNumber === quizQuestionsType.length  -1 ? (
-            <Link to="/finish">
+          {qNumber === quizQuestionsType.length - 1 ? (
+            <Link onClick={nextQuestion} to="/finish">
               <button
                 disabled={finish ? true : false}
                 style={{ cursor: finish && "not-allowed" }}
-                onClick={nextQuestion}
               >
                 {!finish && props.addQuestions(quizQuestionsType)}
                 Finish
@@ -65,7 +65,7 @@ export default function Test(props) {
               disabled={finish ? true : false}
               style={{ cursor: finish && "not-allowed" }}
             >
-            Next
+              Next
             </button>
           )}
         </div>

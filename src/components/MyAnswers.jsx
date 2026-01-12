@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./pages/Header";
 export default function MyAnswers(props) {
-    const answers = props.answers;
-    const questions = props.questions;
+  const answers = props.answers;
+  const questions = props.questions;
+  console.log(answers.length);
+  console.log(questions.length);
   return (
     <div>
-      <Header/>
-          {questions.map((question, qIndex) => {
-          const answer = answers[qIndex].answer || 'No Answer'
+      <Header />
+      {questions.map((question, qIndex) => {
+        let answer = answers[qIndex].answer || "No Answer";
         return (
           <div
             key={qIndex}
@@ -17,9 +19,7 @@ export default function MyAnswers(props) {
             }}
             className="answer anim-show"
           >
-            {console.log(question)}
             <h3>{question.question}</h3>
-            {console.log(answers[qIndex].answer)}
             <p>{answer}</p>
           </div>
         );

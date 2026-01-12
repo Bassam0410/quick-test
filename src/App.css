@@ -78,9 +78,10 @@ ul li.link:hover::after{
 .cards{
   display: grid;
   grid-template-columns: repeat(auto-fit , minmax(700px,1fr));
+  text-align: center;
   gap: 25px;
   padding: 20px;
-  margin-top: -20px;
+  margin : -20px auto;
 
 }
 
@@ -92,6 +93,7 @@ ul li.link:hover::after{
   width: 700px;
   box-shadow:0px 0px 7px 0px var(--main-color);
   text-align: center;
+  margin: 0 auto;
 }
 .card .card-text{
   display: flex;
@@ -127,7 +129,9 @@ ul li.link:hover::after{
 
 h1 {
   font-size: 50px;
-  color: var(--main-color);
+  color: transparent;
+  background: linear-gradient( 180deg , var(--main-color) , var(--hover-color));
+  background-clip: text;
   margin-bottom: 20px;
 }
 

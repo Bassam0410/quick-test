@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Computing from "/public/computing.png";
 export default function Card({
   heading,
   image,
@@ -22,8 +21,8 @@ export default function Card({
         <Link to={`/start-quiz?id=${heading}`}>
           <button
             value={title}
-            onClick={(evt) => {
-              setSubject(evt);
+            onClick={( ) => {
+              setSubject(title);
               resetValues();
             }}
           >

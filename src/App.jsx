@@ -16,8 +16,7 @@ function App() {
   }
   function handleSubmit() {}
   function handleSubject(sub) {
-    const value = sub.target.value;
-    setSubject(value);
+    setSubject(sub);
   }
   function handleUserAnswers(ipt) {
     setUserAnswers((pre) => {
