@@ -7,6 +7,7 @@ export default function Card({
   title,
   setSubject,
   resetValues,
+  language
 }) {
   return (
     <div className="card">
@@ -21,12 +22,12 @@ export default function Card({
         <Link to={`/start-quiz?id=${heading}`}>
           <button
             value={title}
-            onClick={( ) => {
+            onClick={() => {
               setSubject(title);
               resetValues();
             }}
           >
-            Take a Test
+            {language ==="Ar" ? "ابدأ الاختبار": "Take a test "}
           </button>
         </Link>
       </div>

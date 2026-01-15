@@ -1,9 +1,9 @@
 /* NotFound.css */
 :root {
-  --main-color: rgb(252, 129, 120);
-  --secondary-color: #FBF8F3;
-  --hover-color: hwb(4 60% 0%);
-  --text-color: #2B2B2B;
+  --main: #1A8795;
+  --secondary: #fcedf6;
+  --hover : #0c1c69;
+  --text : #777360;
 }
 
 .notfound-container {
@@ -12,8 +12,8 @@
   justify-content:  center;
   align-items: center;
   height: 100vh;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  background-color: var(--secondary);
+  color: var(--text);
   text-align: center;
   padding: 4rem;
 }
@@ -34,8 +34,8 @@
 .notfound-container a {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background-color: var(--main-color);
-  color: var(--secondary-color);
+  background-color: var(--main);
+  color: var(--secondary);
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -43,5 +43,5 @@
 }
 
 .notfound-container a:hover {
-  background-color: var(--hover-color);
+  background-color: var(--hover);
 }

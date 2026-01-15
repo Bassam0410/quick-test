@@ -3,11 +3,13 @@ import Header from "./pages/Header";
 export default function MyAnswers(props) {
   const answers = props.answers;
   const questions = props.questions;
-  console.log(answers.length);
-  console.log(questions.length);
   return (
     <div>
-      <Header />
+      <Header setLanguage={props.setLanguage} language={props.language} />
+      <p className="guide-answers">
+        {" "}
+        <span className="green">True</span> <span className="red">False</span>
+      </p>
       {questions.map((question, qIndex) => {
         let answer = answers[qIndex].answer || "No Answer";
         return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import quizQuestions from "../questions";
+import quizQuestions  from "../questions";
 import { Link } from "react-router-dom";
 import Header from "./pages/Header";
 import TestForm from "./TestForm";
@@ -7,10 +7,9 @@ import shuffle from "../utils/shuffle";
 export default function Test(props) {
   const [qNumber, setQNumber] = useState(0);
   const [finish, setFinish] = useState(true);
-  const quizQuestionsType = shuffle(quizQuestions[props.subject].questions);
-    let question = quizQuestionsType[qNumber];
-    console.log('question number ' + qNumber );
-    
+  const quizQuestionsType = shuffle(quizQuestions[props.language][props.subject].questions);
+  let question = quizQuestionsType[qNumber];
+  
   function handleInputChange() {
     setFinish(false);
   }
@@ -37,7 +36,7 @@ export default function Test(props) {
   }
   return (
     <>
-      <Header />
+      <Header setLanguage={props.setLanguage} language={props.language} />
       <div className="form-container">
         <TestForm
           qNumber={qNumber}
@@ -65,7 +64,7 @@ export default function Test(props) {
               disabled={finish ? true : false}
               style={{ cursor: finish && "not-allowed" }}
             >
-              Next
+              {props.language == "Ar" ? "التالي" : "Next"}
             </button>
           )}
         </div>

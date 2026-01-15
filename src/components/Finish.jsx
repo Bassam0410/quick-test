@@ -28,7 +28,7 @@ export default function Finish(props) {
   };  
   return (
     <div>
-      <Header />
+      <Header setLanguage={props.setLanguage} language={props.language} />
       <div className="finish-btn">
         <div>
           <p style={styleResult}>{result}%</p>
